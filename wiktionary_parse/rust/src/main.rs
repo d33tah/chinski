@@ -21,7 +21,7 @@ fn main() {
                 if current_tag == "title" {
                     current_title = name.clone();
                 }
-                if current_tag == "text" && current_title.len() == 1 {
+                if current_tag == "text" && current_title.chars().count() == 1 {
                     let val = json!([current_title, name]);
                     println!("{}", val.to_string());
                 }
